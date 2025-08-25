@@ -104,7 +104,7 @@ export default function Footer() {
                 placeholder="Enter your email"
                 className="flex-1 md:w-64 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-md focus:outline-none focus:border-purple-500 transition-colors duration-200"
               />
-              <button className="px-6 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-r-md hover:shadow-lg transition-all duration-200 whitespace-nowrap">
+              <button className="px-6 py-2 bg-gradient-to-r from-gray-400 to-gray-600 rounded-r-md hover:shadow-lg transition-all duration-200 whitespace-nowrap">
                 Subscribe
               </button>
             </div>
