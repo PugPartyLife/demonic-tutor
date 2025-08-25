@@ -13,14 +13,14 @@ export default function Banner() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900">
         {/* Background image across entire banner */}
         <div 
           className="absolute inset-0 opacity-30 bg-cover bg-center"
           style={{
-            backgroundImage: 'url("https://cards.scryfall.io/large/front/4/0/401f7042-24fd-42a0-ae7c-e6b7de1aa446.jpg?1562906764")' // Replace with your image path
+            backgroundImage: 'url("https://cards.scryfall.io/large/front/4/0/401f7042-24fd-42a0-ae7c-e6b7de1aa446.jpg?1562906764")'
           }}
         ></div>
         
@@ -31,18 +31,13 @@ export default function Banner() {
             backgroundSize: '50px 50px'
             }}></div>
         </div>
-        
-        {/* Floating Elements */}
-        {/*<div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white/30 rounded-full animate-pulse"></div>
-        <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-gray-400/40 rounded-full animate-bounce"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-blue-400/50 rounded-full animate-ping"></div> */}
         </div>
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="space-y-8">
+        <div className="space-y-6">
             {/* Main Heading */}
-            <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
                 The Maze's End
               <br />
               <span className="relative">
@@ -53,28 +48,28 @@ export default function Banner() {
             </h1>
 
             {/* Subheading */}
-            <p className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto leading-relaxed">
             You are not lost. All Gates lead to the Maze's End...
             </p>
 
-            {/* CTA Buttons - outside the background image area */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-                <button className="border-2 border-white/30 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-white/10 transition-all duration-300 backdrop-blur-sm flex items-center gap-2">
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center pt-4">
+                <button className="border-2 border-white/30 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 backdrop-blur-sm flex items-center gap-2">
                     Learn cEDH
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                 </button>
-                <button className="border-2 border-white/30 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-white/10 transition-all duration-300 backdrop-blur-sm flex items-center gap-2">
+                <button className="border-2 border-white/30 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 backdrop-blur-sm flex items-center gap-2">
                     Commanders
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                 </button>
-                <button className="border-2 border-white/30 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-white/10 transition-all duration-300 backdrop-blur-sm flex items-center gap-2">
+                <button className="border-2 border-white/30 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 backdrop-blur-sm flex items-center gap-2">
                     Cards and Combos
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                 </button>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-16 max-w-3xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 max-w-2xl mx-auto">
             {[
                 { number: '42', label: 'Commanders' },
                 { number: '42', label: 'Cards' },
@@ -82,8 +77,8 @@ export default function Banner() {
                 { number: '42', label: 'Tournaments' },
             ].map((stat, index) => (
                 <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white">{stat.number}</div>
-                <div className="text-gray-200 text-sm md:text-base">{stat.label}</div>
+                <div className="text-2xl md:text-3xl font-bold text-white">{stat.number}</div>
+                <div className="text-gray-200 text-xs md:text-sm">{stat.label}</div>
                 </div>
             ))}
             </div>

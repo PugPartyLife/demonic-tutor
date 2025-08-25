@@ -44,15 +44,14 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {/* Brand Section */}
             <div className="lg:col-span-2">
-              <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-4">
-                KonaCo
+              <div className="text-2xl font-bold bg-gradient-to-r from-gray-400 to-gray-600 bg-clip-text text-transparent mb-4">
+                The Maze's End
               </div>
               <p className="text-gray-400 mb-6 max-w-md">
                 Wanting to get into cEDH but not sure where to start?
                 Looking for the next event near you or major?
                 Wanting to develop a competitive mentality or overcome play anxiety?
                 Look no further! The Maze's End is your new hub to discover what you find interesting in cEDH!
-                competitive EDH strategies, deck building tips, and the latest meta insights from sites like edhtop16, playnice, and topdeck.gg
               </p>
               
               {/* Social Links */}
@@ -62,7 +61,7 @@ export default function Footer() {
                     key={index}
                     href={social.href}
                     aria-label={social.label}
-                    className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-200"
+                    className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors duration-200"
                   >
                     <social.icon className="w-5 h-5" />
                   </a>
@@ -102,9 +101,9 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 md:w-64 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-md focus:outline-none focus:border-purple-500 transition-colors duration-200"
+                className="flex-1 md:w-64 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-md focus:outline-none focus:border-gray-500 transition-colors duration-200 text-white placeholder-gray-400"
               />
-              <button className="px-6 py-2 bg-gradient-to-r from-gray-400 to-gray-600 rounded-r-md hover:shadow-lg transition-all duration-200 whitespace-nowrap">
+              <button className="px-6 py-2 bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 rounded-r-md transition-all duration-200 whitespace-nowrap">
                 Subscribe
               </button>
             </div>

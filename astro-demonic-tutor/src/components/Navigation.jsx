@@ -22,7 +22,7 @@ const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white/80 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      scrolled ? 'bg-gray-900/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Changed to justify-center to center the navigation */}
@@ -34,8 +34,8 @@ const [isOpen, setIsOpen] = useState(false);
                 <a
                   key={item.name}
                   href={item.href}
-                  className={`px-3 py-2 text-sm font-medium transition-colors duration-200 hover:text-gray-600 ${
-                    scrolled ? 'text-gray-900' : 'text-white hover:text-gray-300'
+                  className={`px-3 py-2 text-sm font-medium transition-colors duration-200 hover:text-gray-300 ${
+                    scrolled ? 'text-gray-100' : 'text-white hover:text-gray-300'
                   }`}
                 >
                   {item.name}
@@ -48,7 +48,7 @@ const [isOpen, setIsOpen] = useState(false);
           <div className="md:hidden absolute right-4">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`p-2 rounded-md ${scrolled ? 'text-gray-900' : 'text-white'}`}
+              className={`p-2 rounded-md ${scrolled ? 'text-gray-100' : 'text-white'}`}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -59,12 +59,12 @@ const [isOpen, setIsOpen] = useState(false);
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg">
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-800 shadow-lg">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
+                className="block px-3 py-2 text-base font-medium text-gray-100 hover:text-gray-300 hover:bg-gray-700 rounded-md transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
