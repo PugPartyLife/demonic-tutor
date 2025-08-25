@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.jsx';
+import Banner from '../components/Banner.jsx';
+import Footer from '../components/Footer.jsx';
+---
+
+<Layout title="Your Modern Homepage">
+  <div class="min-h-screen">
+    <Navigation client:load />
+    <Banner client:load />
+    
+    <!-- This section can be static HTML since it's not interactive -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold text-gray-900 mb-8">
+          You can learn cEDH!
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          <b>What is (c)EDH?</b>
+          <br/>
+          Elder Dragon Highlander is an "eternal" format of Magic the Gathering, meaning, you can play any card unless it is explicitly on the banlist. The rules can be found here, (RULES).
+          <br/><br/>
+          <b>With 25,000+ legal cards, where do you even start?</b>
+          <br/>
+          Thats where we come in. Staple cards, combos, routing, decks from the pros, and access to inforgraphics to analyze your own cards, commanders, and combos.
+        </p>
+      </div>
+    </section>
+    
+    <Footer />
+  </div>
+</Layout>
